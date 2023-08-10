@@ -9,6 +9,13 @@ def details(name):
           2. Only 10 attempts will be given to the user to guess the number''')
     game()
 
+def playAgain():
+    play = input("Enter 'y' to play again  \nEnter 'n' to exit the game  \nYour choice: ")
+    if play == 'y':
+        game()
+    else:
+        quit()
+
 def game():
     randNum = random.randint(1, 100)
     UserGuess = None
@@ -20,6 +27,8 @@ def game():
             attempts += 1
             if UserGuess == randNum:
                 print(f'\t\t Congratulations {name}!! You have guessed the correct number!')
+                playAgain()
+
             else:
                 if (UserGuess > randNum):
                     print("\nYour guess is too high.")
@@ -31,9 +40,7 @@ def game():
                 print("\n\t\t You ran out of attempts!!!\n")
                 break
             
-    playAgain = int(input("\n\n Want to play again? \n Enter 1 to play again and 0 to quit the game \n Your choice: "))
-    if playAgain == 1:
-        game()
+    playAgain()
 
 
 name = input("\n\n Enter your name: ")
