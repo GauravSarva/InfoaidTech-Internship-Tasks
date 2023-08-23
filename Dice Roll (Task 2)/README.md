@@ -1,0 +1,2 @@
+This is the python program in which you can roll the dice.
+Rolling of the dice is according to the user e.g. if the user wants to roll 2 dice then this program will roll two dice at the instance, if the user wants to roll three dice then the program will roll three dice at the instance, and so on.
